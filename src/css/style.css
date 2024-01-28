@@ -24,7 +24,7 @@ body{
         "header header header header" auto
         "...... lists  active ......" auto /
         1fr minmax(100px , 300px) minmax(250px , 500px) 1fr;
-    gap: 50px;
+    column-gap: 50px;
 }
 
 .title{
@@ -33,7 +33,7 @@ body{
     font-size: calc(8vw + 1rem);
     font-weight: 900;
     color: rgba(0, 0, 0, 0.1);
-    margin: -0.5em 0 0.5em;
+    margin: -0.4em 0 0.5em;
 }
 
 .all-tasks{
@@ -82,6 +82,19 @@ form{
     opacity: 0.7;
 }
 
+.btn.delete{
+    font-weight: var(--font-light);
+    opacity: 0.9;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+}
+
+.btn.delete:hover{
+    color: red;
+}
+
+
 .new {
     background-color: transparent;
     border: 0;
@@ -89,11 +102,16 @@ form{
     border-bottom: 1px solid currentColor;
     font-size: inherit;
     outline: none;
+    padding: 0.25rem;
+
 
     transition: border-bottom 150ms ease-in;
     order: 2;
 }
 
+.new::placeholder{
+    opacity: 0.4;
+}
 
 
 .new:focus{
@@ -101,7 +119,7 @@ form{
 }
 
 .new:focus::placeholder{
-    opacity: 0.2;
+    opacity: 0.15;
 }
 
 .new.list{
@@ -146,8 +164,12 @@ form{
 
 .todo-body{
     padding: var(--spacer);
+    position: relative;
 }
 
+.new-task-creator .create{
+    color: green;
+}
 .tasks{
     font-size: 1.3rem;
 }
@@ -156,6 +178,7 @@ form{
     opacity: 0;
     position: absolute;
 }
+
 
 .task label{
     display: inline-flex;
@@ -224,6 +247,17 @@ form{
 [type="checkbox"]:checked + label::after{
     transform: scaleX(1);
     transform-origin: left;
+}
+
+
+.delete-stuff{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -35px;
+    color: black;
 }
 
 
