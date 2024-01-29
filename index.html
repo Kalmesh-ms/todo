@@ -14,17 +14,16 @@
 
     <div class="all-tasks">
         <h2 class="tast-list-title">My Projects</h2>
-        <ul class="task-list">
-            <li class="list-name active-list">Odin</li>
-            <li  class="list-name">DS & Algo</li>
-            <li class="list-name">Personal Project</li>
+        <ul class="task-list" data-lists>
         </ul>
 
-        <form action="">
-            <input type="text"
-             class="new list" 
-             placeholder="new project name" 
-             aria-label="new list name"/>
+        <form action="" data-new-list-form>
+            <input 
+            data-new-list-input
+            type="text"
+            class="new list" 
+            placeholder="new project name" 
+            aria-label="new list name"/>
             <button class="btn create" aria-label="create new list" >+</button>
         </form>
     </div>
@@ -89,10 +88,6 @@
 
 
 
-
-
-
-
-    <script defer src="main.js"></script>
+    <script defer src="bundle.js"></script>
 </body>
 </html>
