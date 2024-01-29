@@ -157,4 +157,4 @@ function clearElement(element){
 
 render()
 
-// localStorage.clear()
+localStorage.clear();

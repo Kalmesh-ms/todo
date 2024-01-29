@@ -153,13 +153,13 @@ form{
 }
 
 .list-title{
-    font-size: xx-large;
+    font-size: x-large;
     margin: 0 1rem 0 0;
 }
 
 .task-count{
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .todo-body{
@@ -170,8 +170,9 @@ form{
 .new-task-creator .create{
     color: black;
 }
+
 .tasks{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 [type="checkbox"] {
