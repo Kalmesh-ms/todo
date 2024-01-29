@@ -34,6 +34,7 @@ body{
     font-weight: 900;
     color: rgba(0, 0, 0, 0.1);
     margin: -0.4em 0 0.1em;
+    
 }
 
 .all-tasks{
@@ -140,6 +141,7 @@ form{
     padding: var(--spacer);
     background-color: #e4e4e4;
    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -226,21 +228,9 @@ form{
     opacity: 0.5;
 }
 
-.task label::after{
-    content: "";
-    position: absolute;
-    left: 1.5em;
-    right: 0;
-    height: 3px;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 150ms ease-in-out;
-}
-
-[type="checkbox"]:checked + label::after{
-    transform: scaleX(1);
-    transform-origin: left;
+[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+    transition: all 0.3s ease;
 }
 
 
