@@ -11,6 +11,7 @@
 
 *{
     font-family: var(--font-fam);
+    box-sizing: border-box;
 }
 
 body{
@@ -18,27 +19,27 @@ body{
     box-sizing: border-box;
     margin: 0;
     background-color: var(--bg-color);
-    display: grid;
-
-    grid: 
-        "header header header header" auto
-        "...... lists  active ......" auto /
-        1fr minmax(100px , 300px) minmax(250px , 500px) 1fr;
+    display: flex;
+    flex-direction: column;
     column-gap: 50px;
 }
 
+#wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.all-tasks{
+    margin-right: 20px;
+}
+
 .title{
-    grid-area: header;
     text-align: center;
     font-size: calc(8vw + 1rem);
     font-weight: 900;
     color: rgba(0, 0, 0, 0.1);
     margin: -0.4em 0 0.1em;
     
-}
-
-.all-tasks{
-    grid-area: lists;
 }
 
 .task-list{
@@ -59,6 +60,7 @@ body{
 
 form{
     display: flex;
+    box-sizing: border-box;
 }
 
 .btn{
@@ -136,7 +138,6 @@ form{
 .todo-list{
     --spacer : 2rem;
 
-    grid-area: active;
     background: white;
     color: black;
 }
@@ -253,17 +254,21 @@ form{
 
 @media screen and (max-width : 860px){
     body{
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 
-        grid: 
-            "header header header" 
-            "...... lists  ......" auto
-            "...... active ......" auto /
-            1fr minmax(250px , 500px) 1fr;
+    #wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .all-tasks{
-        margin: 0 0 20px 0;
+        margin-bottom: 20px;
     }
 }
 

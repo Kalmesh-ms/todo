@@ -7,50 +7,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://fav.farm/🌶" />
+    <link rel="icon" href="https://fav.farm/👓" />
 </head>
 <body>
     <h1 class="title">Stuff I need to do</h1>
 
-    <div class="all-tasks">
-        <h2 class="tast-list-title">My Projects</h2>
-        <ul class="task-list" data-lists></ul>
-
-        <form action="" data-new-list-form>
-            <input 
-            data-new-list-input
-            type="text"
-            class="new list" 
-            placeholder="new project name" 
-            aria-label="new list name"/>
-            <button class="btn create" aria-label="create new list" >+</button>
-        </form>
-    </div>
-
-    <div class="todo-list" data-list-display-container>
-        <div class="todo-header">
-            <h2 class="list-title" data-list-title></h2>
-            <p class="task-count" data-list-count></p>
+    <div id="wrapper">
+        <div class="all-tasks">
+            <h2 class="tast-list-title">My Projects</h2>
+            <ul class="task-list" data-lists></ul>
+            <form action="" data-new-list-form>
+                <input
+                data-new-list-input
+                type="text"
+                class="new list"
+                placeholder="new project name"
+                aria-label="new list name"/>
+                <button class="btn create" aria-label="create new list" >+</button>
+            </form>
         </div>
-
-        <div class="todo-body">
-            <div class="tasks" data-tasks></div>
-
-            <div class="new-task-creator">
-                <form action="" data-new-task-form>
-                    <input type="text" class="new task"
-                        placeholder="new task name"
-                        aria-label="new task name"
-                        data-new-task-input
-                    />
-                    
-                    <button class="btn create" aria-label="create new task" >+</button>
-                </form>
+        <div class="todo-list" data-list-display-container>
+            <div class="todo-header">
+                <h2 class="list-title" data-list-title></h2>
+                <p class="task-count" data-list-count></p>
             </div>
-
-            <div class="delete-stuff">
-                <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
-                <button class="btn delete" data-delete-list-button>Delete project</button>
+            <div class="todo-body">
+                <div class="tasks" data-tasks></div>
+                <div class="new-task-creator">
+                    <form action="" data-new-task-form>
+                        <input type="text" class="new task"
+                            placeholder="new task name"
+                            aria-label="new task name"
+                            data-new-task-input
+                        />
+        
+                        <button class="btn create" aria-label="create new task" >+</button>
+                    </form>
+                </div>
+                <div class="delete-stuff">
+                    <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+                    <button class="btn delete" data-delete-list-button>Delete project</button>
+                </div>
             </div>
         </div>
     </div>
